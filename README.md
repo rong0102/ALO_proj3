@@ -47,7 +47,7 @@ previous register value: `vector<int> RF = { 0, 0, 2, 4, 6, 8 };`
 
 Register Allocation Table: `vector<string>RAT(6);` same as RF, first isn't used
 
-RerServation Table: `vector<RS> reservation(5); `RS1~3 is add/sub; RS4~5 is mul/div
+RerServation Table: `vector<RS> reservation(5); `RS1-3 is add/sub; RS4-5 is mul/div
 
 check RS is emty or not: `bool checkRS[5] = { true,true,true,true,true };`true = empty; false = not empty
 
