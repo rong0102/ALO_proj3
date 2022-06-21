@@ -47,13 +47,11 @@
 >
 >`vector<string>RAT(6);` Register Allocation Table ;same as RF, first isn't used
 >
->`vector<RS> reservation(5); ` RerServation Table; RS1-3 is add/sub, RS4-5 is mul/div
+>`vector<RS> reservation(5);` RerServation Table; RS1-3 is add/sub, RS4-5 is mul/div
 >
 > `bool checkRS[5] = { true,true,true,true,true };` check RS is emty or not; true = empty, false = not empty
 > 
->`Buffer Abuff;`  `Buffer Mbuff;`
->two ALU ADD & MUL
-
+>`Buffer Abuff;`  `Buffer Mbuff;`two ALU buffer
 >
 >`vector<Instruction>Data;` store instructions from given file(.txt)
 ****
