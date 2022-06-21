@@ -11,7 +11,7 @@
 3.print out the status
 
 ## code explanation
-*define*
+### *define*
 ```
 #define add_cyc  2;`
 #define mul_cyc  5;
