@@ -12,12 +12,10 @@
 
 ## code explanation
 ### *define*
-定義不同instruction的cycle數，`add/addi/sub`為`2`
+定義不同instruction的cycle數，add/addi/sub為2
 ```
 #define add_cyc  2;`
 #define mul_cyc  5;
 #define div_cyc  10;
 ```
 
-
-`add/addi/sub`為`2`
