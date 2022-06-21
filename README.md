@@ -1,5 +1,7 @@
-# ALO_proj3
-tomasulo algorithm
+# ALO_proj3:Tomasulo
+>demo影片: https://youtu.be/X-Mbc7GUTOs
 
-output for cycle X (output要輸出所有有變化cycle)
+測試input資料
+
+
 
