@@ -12,51 +12,49 @@
 
 ## code explanation
 ### *define*
-定義不同instruction的cycle數
-```
-#define add_cyc  2; //add/addi/sub為2
-#define mul_cyc  5;
-#define div_cyc  10;
-```
-Instruction structure
-```
-struct Instruction
-{
-	string operation;       //儲存哪種instruction: add/addi...
-	int rd, rs1, rs2, imm;  //將資料F1字串取1儲存
-};
-```
-RS structure 
-```
-struct RS {
-	string operand,rs1,rs2; //考慮到會儲存RS+數字的形式，全使用string
-};
-```
-ALU buffer structure
-```
-struct Buffer{
-	int c,RS_num; //Wr.result cycle/ which RS
-	bool occupy;  //RS? is occupy or not
-};
-```
-`cyc_count = 1` current cycle time:
+>定義不同instruction的cycle數
+>```
+>#define add_cyc  2; //add/addi/sub為2
+>#define mul_cyc  5;
+>#define div_cyc  10;
+>```
+>Instruction structure
+>```
+>struct Instruction
+>{
+>	string operation;       //儲存哪種instruction: add/addi...
+>	int rd, rs1, rs2, imm;  //將資料F1字串取1儲存
+>};
+>```
+>RS structure 
+>```
+>struct RS {
+>	string operand,rs1,rs2; //考慮到會儲存RS+數字的形式，全使用string
+>};
+>```
+>ALU buffer structure
+>```
+>struct Buffer{
+>	int c,RS_num; //Wr.result cycle/ which RS
+>	bool occupy;  //RS? is occupy or not
+>};
+>```
+>`cyc_count = 1` current cycle time:
+>
+>`bool change;` check cycle change or not
+>
+>`vector<int> RF = { 0, 0, 2, 4, 6, 8 };` previous register value
+>
+>`vector<string>RAT(6);` Register Allocation Table ;same as RF, first isn't used
+>
+>`vector<RS> reservation(5); ` RerServation Table; RS1-3 is add/sub, RS4-5 is mul/div
+>
+> `bool checkRS[5] = { true,true,true,true,true };` check RS is emty or not; true = empty, false = not empty
+> 
+>`Buffer Abuff;`  `Buffer Mbuff;`
+>two ALU ADD & MUL
 
-`bool change;` check cycle change or not
-
-`vector<int> RF = { 0, 0, 2, 4, 6, 8 };` previous register value:
-
-`vector<string>RAT(6);` Register Allocation Table ;same as RF, first isn't used
-
-`vector<RS> reservation(5); ` RerServation Table; RS1-3 is add/sub, RS4-5 is mul/div
-
- `bool checkRS[5] = { true,true,true,true,true };` check RS is emty or not; true = empty, false = not empty
-
-two ALU ADD & MUL
-```
-Buffer Abuff;
-Buffer Mbuff;
-```
-`vector<Instruction>Data;` store instructions from given file(.txt)
-
----
+>
+>`vector<Instruction>Data;` store instructions from given file(.txt)
+****
 ### *function*
