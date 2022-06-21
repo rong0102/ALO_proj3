@@ -57,3 +57,6 @@ Buffer Abuff;
 Buffer Mbuff;
 ```
 `vector<Instruction>Data;` store instructions from given file(.txt)
+
+---
+### *function*
