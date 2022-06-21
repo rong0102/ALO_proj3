@@ -12,8 +12,8 @@ ADDI F4, F1, 2
 MUL F5, F5, F5
 ADD F1, F4, F4
 ```
-
 output for cycle X (output要輸出所有**有變化**cycle)
+
 Cycle: 1
 ```
      _ RF __
