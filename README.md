@@ -39,21 +39,21 @@ struct Buffer{
 	bool occupy;  //RS? is occupy or not
 };
 ```
-current cycle time: `cyc_count = 1`
+`cyc_count = 1`current cycle time:
 
-check cycle change or not: `bool change;`
+`bool change;`check cycle change or not:
 
-previous register value: `vector<int> RF = { 0, 0, 2, 4, 6, 8 };`
+`vector<int> RF = { 0, 0, 2, 4, 6, 8 };`previous register value:
 
-Register Allocation Table: `vector<string>RAT(6);` same as RF, first isn't used
+`vector<string>RAT(6);`Register Allocation Table ;same as RF, first isn't used
 
-RerServation Table: `vector<RS> reservation(5); `RS1-3 is add/sub; RS4-5 is mul/div
+`vector<RS> reservation(5); ` RerServation Table; RS1-3 is add/sub, RS4-5 is mul/div
 
-check RS is emty or not: `bool checkRS[5] = { true,true,true,true,true };`true = empty; false = not empty
+ `bool checkRS[5] = { true,true,true,true,true };`check RS is emty or not; true = empty, false = not empty
 
 two ALU ADD & MUL
 ```
 Buffer Abuff;
 Buffer Mbuff;
 ```
-store instructions from given file(.txt): `vector<Instruction>Data;`
+`vector<Instruction>Data;`store instructions from given file(.txt)
